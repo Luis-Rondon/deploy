@@ -1,0 +1,365 @@
+@import './breackpoints.scss';
+
+.row-item-table {
+  text-align: start;
+  border-bottom: 0.2rem solid var(--gray-medium);
+
+  @include respond-to('medium') {
+    margin: 2rem 2rem !important;
+  }
+
+  .col {
+    color: var(--gray-dark);
+    word-wrap: break-word;
+    font-size: 0.9rem;
+    margin: auto;
+    @include respond-to('large') {
+      order: 0 !important;
+      font-size: 1rem;
+    }
+    @include respond-to('xxlarge') {
+      font-size: x-large;
+    }
+  }
+
+  .col-number {
+    text-align: center;
+  }
+
+  .col-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .image {
+      width: 3.5rem;
+      height: 3.5rem;
+      margin: 0rem;
+      @include respond-to('xxlarge') {
+        height: 5rem;
+        width: 5rem;
+      }
+    }
+  }
+
+  .col-icons {
+    text-align: center;
+  }
+}
+
+.row-user {
+  position: relative;
+  margin: 2rem 0rem !important;
+  padding-bottom: 0.5rem;
+
+  .btn-delete-user {
+    position: absolute;
+    color: var(--blue-one);
+    transition: all 0.5s;
+    right: -0.3rem;
+    bottom: 1.2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+
+    &:hover {
+      color: var(--red);
+      transform: scale(1.5);
+      @include respond-to('xxlarge') {
+        transform: scale(1.2);
+      }
+    }
+    @include respond-to('medium') {
+      top: 18%;
+      right: -0.01rem;
+    }
+    @include respond-to('large') {
+      font-size: 2rem;
+
+      right: 0.1rem;
+    }
+    @include respond-to('xxlarge') {
+      font-size: 2.5rem;
+      top: 20%;
+    }
+  }
+
+  .col-number {
+    order: 5;
+    padding: 0rem;
+  }
+
+  .col-image {
+    order: 1;
+    padding: 0rem;
+  }
+
+  .col-username {
+    order: 2;
+    @include respond-to('large') {
+      text-align: start;
+    }
+  }
+
+  .col-email {
+    order: 6;
+  }
+
+  .col-role {
+    order: 3;
+  }
+
+  .col-role-btn {
+    order: 4;
+    cursor: pointer;
+  }
+
+  .col-password {
+    order: 7;
+    i {
+      cursor: pointer;
+      margin-left: 0.3rem;
+    }
+  }
+
+  .icon-disabled {
+    opacity: 0.6;
+  }
+}
+
+.row-patient-valoration {
+  margin: 0rem 0rem !important;
+  padding: 0.2rem 0rem;
+
+  .dropdown-toggle {
+    background-color: transparent !important;
+    border: none !important;
+    color: var(--blue-primary) !important;
+  }
+
+  .dropdown-menu {
+    min-width: 55px !important;
+    width: 15px !important;
+  }
+
+  .dropdown-item {
+    margin: 0px !important;
+    padding: 0px 5px !important;
+  }
+
+  a {
+    color: inherit;
+    &:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  .icon-delete {
+    opacity: 0.6;
+    margin: 0px 10px !important;
+
+    @include respond-to('medium') {
+      margin: 0px 15px !important;
+    }
+
+    @include respond-to('large') {
+      margin: 0px 4px !important;
+      padding-left: 5px;
+    }
+  }
+
+  .col {
+    padding: 0rem;
+    vertical-align: middle !important;
+
+    label {
+      margin-bottom: 0px;
+    }
+  }
+
+  .col-number {
+    order: 4;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+  }
+
+  .col-image {
+    order: 1;
+  }
+
+  .col-name {
+    order: 2;
+    padding: 0rem 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .col-gestaion-weeks {
+    order: 5;
+    padding: 0rem 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include respond-to('medium') {
+      justify-content: center;
+    }
+  }
+
+  .col-cs {
+    order: 6;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    input {
+      color: var(--gray-dark);
+      // font-weight: 700;
+      font-size: 1rem;
+      @include respond-to('large') {
+        order: 0 !important;
+      }
+      @include respond-to('xxlarge') {
+        font-size: large;
+      }
+    }
+
+    label {
+      margin-top: 0.5rem !important;
+    }
+
+    .checkbox-form-group .row {
+      margin: 0rem !important;
+      width: 100% !important;
+    }
+
+    .label-pts {
+      margin: 0px !important;
+    }
+  }
+
+  .col-btn {
+    order: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    .btn-watch {
+      height: fit-content;
+      background-color: var(--blue-one) !important;
+      padding: 0.1rem 0.2rem;
+      font-size: small;
+
+      &:hover {
+        background-color: var(--pink) !important;
+        color: var(--white);
+      }
+
+      @include respond-to('large') {
+        padding: 0.1rem 0.5rem;
+        font-size: 1rem;
+      }
+      @include respond-to('xxlarge') {
+        font-size: large;
+      }
+    }
+  }
+
+  .col-icons {
+    order: 7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem 0rem;
+
+    @include respond-to('medium') {
+      justify-content: center;
+    }
+    @include respond-to('large') {
+      margin: 0rem;
+      justify-content: space-around;
+    }
+
+    i {
+      font-size: 1.5rem;
+      cursor: pointer;
+      margin: 0rem 1rem;
+      height: min-content;
+
+      @include respond-to('large') {
+        font-size: 1.5rem;
+        margin: 0.2rem;
+      }
+      @include respond-to('xlarge') {
+        margin: 0rem 0.5rem;
+      }
+      @include respond-to('xxlarge') {
+        font-size: 2rem;
+      }
+    }
+
+    .icon {
+      margin: 0rem 0.2rem;
+      @include respond-to('medium') {
+        margin: 0rem 0.5rem;
+      }
+      @include respond-to('large') {
+        margin: 0rem 0rem;
+      }
+      @include respond-to('xlarge') {
+        margin: 0rem 0.1rem;
+      }
+    }
+
+    .icon-history {
+      font-size: 2rem;
+      @include respond-to('xxlarge') {
+        font-size: 2.7rem;
+      }
+    }
+
+    .icon-patient-free,
+    .icon-patient-cancel {
+      cursor: pointer;
+      font-size: 2.4rem;
+      @include respond-to('xxlarge') {
+        font-size: 3.2rem;
+      }
+    }
+  }
+}
+
+.row-date-history {
+  margin: 1rem 0rem 1rem 0rem !important;
+
+  .col {
+    margin-left: 0px !important;
+  }
+
+  .col-date,
+  .col-schedule {
+    text-align: center;
+    @include respond-to('large') {
+      text-align: start;
+    }
+  }
+
+  .col-dowload {
+    i {
+      font-size: 1.5rem;
+      cursor: pointer;
+      @include respond-to('large') {
+        font-size: 1.5rem;
+        margin: 0.2rem;
+      }
+      @include respond-to('xlarge') {
+        margin: 0rem 0.5rem;
+      }
+      @include respond-to('xxlarge') {
+        font-size: 2rem;
+      }
+    }
+  }
+}

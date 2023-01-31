@@ -1,0 +1,319 @@
+@import './breackpoints.scss';
+
+#root {
+  overflow: auto;
+  height: 100vh;
+}
+
+.neuro-monitoring-form {
+  position: relative;
+}
+
+.ico-backward {
+  position: absolute;
+  right: 0rem;
+  top: 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+.title-monitoring-content-not-found {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  @include respond-to('xxlarge') {
+    font-size: large;
+  }
+}
+
+.form-neuro-monitoring {
+  margin: 0rem;
+  position: relative;
+
+  @include respond-to('large') {
+    padding: 1rem 2rem 1.5rem 2rem;
+    margin: 0rem 1.5rem;
+  }
+
+  &.form {
+    background-color: var(--white) !important;
+  }
+
+  .col-index-header {
+    padding: 0px 5px !important;
+    .index-header {
+      background-color: var(--blue-one);
+      color: var(--white);
+      height: 100%;
+      margin: 0px;
+      text-align: center;
+      padding: 8px 0px;
+      border-radius: 10px;
+      width: 100%;
+      vertical-align: middle;
+    }
+  }
+
+  .btn-edit {
+    margin: 0.5rem 0rem;
+    @include respond-to('medium') {
+      margin: 0rem;
+    }
+  }
+
+  .subtitle {
+    text-align: center;
+  }
+
+  .confirmar-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .btn-green {
+    background-color: var(--green);
+  }
+
+  .btn-red {
+    background-color: var(--red);
+  }
+
+  .row-neuro-monitoring {
+    margin: 0rem !important;
+    padding: 0rem 1rem;
+
+    .title {
+      font-size: 1.5rem;
+      @include respond-to('xxlarge') {
+        font-size: large;
+      }
+    }
+
+    label.subtitle {
+      font-weight: 500;
+      margin-bottom: 0px;
+      @include respond-to('xxlarge') {
+        font-size: large;
+      }
+    }
+
+    .col {
+      padding: 0rem;
+      @include respond-to('xlarge') {
+        padding: 0rem 0rem 0rem 0.4rem !important;
+      }
+    }
+
+    .row-media-files {
+      text-align: center;
+    }
+
+    .col-btn {
+      margin-bottom: 1.5rem;
+    }
+
+    .row-media-files {
+      .icon-neuro-file {
+        cursor: pointer;
+        font-size: 2rem;
+        &:hover {
+          color: var(--red);
+        }
+      }
+
+      .neuro-text {
+        word-break: break-all;
+        font-size: small;
+        padding: 0px 5px;
+      }
+    }
+  }
+
+  .references-container {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    // padding: 0rem !important;
+  }
+
+  .references-doctor {
+    background-color: var(--blue-one);
+    border-radius: 5px;
+    color: var(--white);
+    cursor: pointer;
+    margin: 0rem 1rem 1rem 0rem;
+    padding: 0.1rem 0.5rem;
+    width: min-content;
+
+    @include respond-to('medium') {
+      padding: 0.5rem 1rem;
+      margin: 0rem 1rem 1rem 0rem;
+    }
+    @include respond-to('large') {
+      padding: 0.5rem 1rem;
+      margin: 0rem 2rem 1rem 0rem;
+    }
+    @include respond-to('xlarge') {
+      padding: 0.5rem 1.5rem;
+      margin: 0rem 3rem 1rem 0rem;
+    }
+    @include respond-to('xxlarge') {
+      padding: 0.5rem 1.5rem;
+      margin: 0rem 2rem 1rem 0rem;
+    }
+  }
+  
+  .grade {
+    background-color: var(--blue-one);
+    border-radius: 5px;
+    color: var(--white);
+    margin: 0rem 1rem 1rem 0rem;
+    padding: 0.1rem 0.5rem;
+    width: fit-content;
+  }
+
+  .normal {
+    background-color: var(--green);
+  }
+  .leve {
+    background-color: var(--yellow);
+  }
+  .moderado {
+    background-color: var(--orange);
+  }
+  .severo {
+    background-color: var(--red);
+  }
+
+  .risk-bajo, .risk-bajo:focus {
+    background-color: var(--green) !important;
+    color: var(--white);
+  }
+  .risk-medio, .risk-medio:focus {
+    background-color: var(--yellow) !important;
+    color: var(--white);
+  }
+  .risk-alto, .risk-alto:focus {
+    background-color: var(--red) !important;
+    color: var(--white);
+  }
+
+  .risk-normal-optimo, .risk-normal-optimo:focus {
+    background-color: var(--green) !important;
+    color: var(--white);
+  }
+
+  .risk-normal-suboptimo, .risk-normal-suboptimo:focus {
+    background-color: var(--yellow) !important;
+    color: var(--white);
+  }
+
+  .risk-ligeramente-anormal, .risk-ligeramente-anormal:focus {
+    background-color: var(--orange) !important;
+    color: var(--white);
+  }
+
+  .risk-definitivamente-anormal, .risk-definitivamente-anormal:focus {
+    background-color: var(--red) !important;
+    color: var(--white);
+  }
+
+  .align-end {
+    text-align: end;
+  }
+
+  .input-movement-type {
+    text-transform: uppercase;
+  }
+
+  .input-auto-heigth {
+    resize: none;
+    overflow: auto !important;
+    // max-height: 240px;
+    // height: 0;
+
+    &::placeholder {
+      font-size: 1.1em;
+    }
+  }
+
+}
+.btn-agendar-cita {
+  a {
+    text-decoration: none !important;
+    color: var(--white);
+
+    &:hover {
+      color: var(--white);
+    }
+  }
+}
+
+.neuro-monitoring-item-gray {
+  .neuro-monitoring-item,
+  .select-search__input {
+    background-color: RGB(43, 92, 146, 0.1) !important;
+  }
+  textarea:focus,
+  input:focus {
+    background-color: transparent !important;
+  }
+}
+
+.neuro-monitoring-item-white {
+  .neuro-monitoring-item {
+    background-color: var(--white) !important;
+  }
+}
+  
+.small-text {
+  font-size: small;
+}
+
+.neuro-monitoring-item {
+  padding-top: 10px;
+
+  .neuroitem-input-number {
+    order: 1;
+
+    @include respond-to('medium') {
+      order: initial;
+    }
+  }
+
+  .neuroitem-input-createdat {
+    // order: 0;
+
+    @include respond-to('medium') {
+      order: initial;
+    }
+  }
+
+  .neuroitem-input-other {
+    order: 3;
+    @include respond-to('medium') {
+      order: initial;
+    }
+  }
+
+  .input-auto-heigth {
+    resize: none;
+    overflow: auto !important;
+    height: 0;
+
+    &::placeholder {
+      font-size: 1.1em;
+    }
+  }
+}
+
+// .form-neuro-monitoring {
+//   .form-general-movements {
+
+//   }
+
+//   .form-motor-repertoire  {
+
+//   }
+// }

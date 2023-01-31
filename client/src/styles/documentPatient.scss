@@ -1,0 +1,36 @@
+@import './breackpoints.scss';
+
+.document-patient {
+  .container-data {
+    background-color: var(--white);
+    padding: 1.5rem 1rem !important;
+
+    @include respond-to('medium') {
+      padding: 2rem 0rem !important;
+    }
+
+    @include respond-to('large') {
+      padding: 2rem 3rem 0rem 0rem !important;
+      margin-right: 0rem;
+      margin-bottom: 2rem;
+    }
+
+    .col {
+      padding: 0rem !important;
+    }
+  }
+
+  .label {
+    font-weight: 700 !important;
+  }
+
+  .subtitle {
+    font-weight: 600;
+  }
+
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

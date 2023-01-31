@@ -1,0 +1,188 @@
+@import './breackpoints.scss';
+
+.appointments-v2 {
+  .row-schedule-title {
+    .col {
+      text-align: center;
+      font-size: large;
+      font-weight: 500;
+      color: var(--gray-dark);
+      margin: 0px 0px 10px 0px;
+    }
+
+    .col-title-seven {
+      font-size: medium;
+    }
+  }
+
+  .row-schedule {
+    .row-date {
+      height: 100%;
+      margin-bottom: 0px !important;
+      padding: 0px !important;
+    }
+
+    .col {
+      border: solid 1px var(--blue-one);
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    .col-date {
+      padding: 0px !important;
+      min-height: 40px;
+      cursor: pointer;
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .date-seven {
+      // background-color: bisque;
+    }
+
+    .txt-agendado,
+    .txt-reservado,
+    .txt-actual,
+    .txt-active {
+      color: var(--white);
+      height: 100% !important;
+      width: 100% !important;
+
+      span {
+        word-break: break-all;
+      }
+    }
+
+    .txt-agendado {
+      background-color: var(--blue-one);
+    }
+
+    .txt-reservado {
+      background-color: var(--blue-two);
+    }
+
+    .txt-actual {
+      background-color: var(--pink);
+    }
+
+    .txt-active {
+      background-color: var(--green);
+    }
+  }
+
+  .date-list-editing {
+    color: var(--green);
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  .icon-edit,
+  .icon-delete {
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0rem 0.5rem;
+    text-align: center;
+    @include respond-to('large') {
+      font-size: 1.5rem;
+      margin: 0.2rem;
+    }
+    @include respond-to('xlarge') {
+      margin: 0rem 0.5rem;
+    }
+    @include respond-to('xxlarge') {
+      font-size: 2rem;
+    }
+  }
+
+  .btn-column {
+    background-color: var(--white);
+    padding: 1rem;
+    text-align: start;
+
+    @include respond-to('medium') {
+      background-color: var(--gray);
+      margin-top: 1rem;
+      text-align: end;
+    }
+
+    @include respond-to('large') {
+      padding-bottom: 0rem;
+      padding-top: 0rem;
+    }
+
+    .btn-custom {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+
+      @include respond-to('large') {
+        margin-bottom: 0rem;
+      }
+    }
+  }
+
+  .btn-important {
+    background-color: var(--red);
+  }
+
+  .txt-pink {
+    color: var(--pink);
+  }
+
+  .col-btn-save {
+    margin-bottom: 0.5rem;
+
+    .btn-save,
+    .btn-cancel {
+      background-color: var(--blue-one);
+
+      &:hover {
+        background-color: var(--blue-two);
+      }
+    }
+  }
+
+  .container-data {
+    background-color: var(--white);
+    padding: 0rem 1rem !important;
+
+    @include respond-to('medium') {
+      padding: 0rem !important;
+    }
+
+    @include respond-to('large') {
+      padding: 0.5rem 5rem 0.5rem 0rem !important;
+      background-color: var(--gray);
+    }
+
+    .col-calendar {
+      background-color: var(--white);
+      padding: 30px 20px 30px 30px;
+      // height: 500px;
+      overflow-y: scroll;
+    }
+
+    .col-list {
+      padding: 30px 50px;
+      background-color: var(--white);
+    }
+  }
+
+  .form-new-date {
+    margin-bottom: 20px;
+  }
+}
+.submit-btn-container {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+}
+
+.is-visible-calendar {
+  display: none;
+}

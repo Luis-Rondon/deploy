@@ -1,0 +1,18 @@
+@import './breackpoints.scss';
+.row-field-array-indicators {
+  display: flex;
+  justify-content: space-between;
+
+  .checkbox-form-group {
+    input {
+      @include respond-to('xxlarge') {
+        margin-left: -1rem !important;
+      }
+    }
+  }
+}
+
+.col {
+  margin: 0px !important;
+  padding: 0px !important;
+}

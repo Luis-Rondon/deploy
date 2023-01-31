@@ -1,0 +1,64 @@
+@import './breackpoints.scss';
+
+.main-container-row-field-motor-repertoire {
+}
+
+.row-field-array-motor-repertoire {
+  .default {
+    color: var(--blue-one);
+  }
+
+  .green {
+    color: var(--green-dark) !important;
+  }
+
+  .red {
+    color: var(--red);
+  }
+
+  .col {
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+
+  .label-total {
+    margin: 5px;
+    font-weight: 600;
+  }
+
+  // .col-title {
+  //   background-color: var(--gray);
+  //   text-align: center;
+  //   font-size: large;
+  // }
+
+  .col-input {
+    // padding: 5px 0px 5px 40px;
+
+    // @include respond-to("large") {
+    //   padding: 5px 10px;
+    // }
+
+    .container-radio {
+      width: 100% !important;
+      text-align: end !important;
+    }
+
+    .input-radio {
+      // padding-left: 10px !important;
+      margin: 5px 10px 0px 10px !important;
+    }
+
+    .label-radio-value {
+      text-align: end !important;
+      margin: 0px 0px 0px 30px !important;
+    }
+
+    // .input-custom {
+    //   padding: 0px;
+    //   text-align: end;
+    //   max-width: 30% !important;
+    //   // max-width: fit-content !important;
+    // }
+  }
+}

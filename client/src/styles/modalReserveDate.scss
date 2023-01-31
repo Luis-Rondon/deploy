@@ -1,0 +1,80 @@
+@import './breackpoints.scss';
+
+.modal-reserve-date-bg {
+  background-color: var(--gray);
+  height: 100vh;
+  left: 0rem;
+  margin: 0rem !important;
+  position: fixed;
+  top: 0rem;
+  transition: all 0.8s;
+  width: 100vw;
+  z-index: 10;
+
+  .col-reserve-date {
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .custom-alert {
+      max-width: 25rem !important;
+      @include respond-to('xxlarge') {
+        max-width: 45rem !important;
+      }
+    }
+
+    .reserve-date-form {
+      background-color: var(--white);
+      max-height: 80vh;
+      overflow-y: scroll;
+      padding: 0.5rem;
+      position: relative;
+      width: fit-content;
+      // max-width: 50vw;
+
+      @include respond-to('medium') {
+        padding: 2rem;
+      }
+
+      // .title {
+      //   background-color: var(--gray);
+      //   position: absolute;
+      //   top: -4.5rem;
+      //   margin-left: -2rem;
+      //   z-index: 2000;
+      // }
+
+      .subtitle-global {
+        margin-bottom: 1rem;
+      }
+
+      .btn-custom {
+        margin-bottom: 1rem;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        width: 100%;
+      }
+
+      input:disabled,
+      input[readonly] {
+        padding: 0rem;
+        background-color: transparent;
+        border: none;
+      }
+
+      input,
+      textarea {
+        padding: 0rem !important;
+      }
+
+      .col-btn {
+        text-align: center;
+        button {
+          font-size: large;
+        }
+      }
+    }
+  }
+}

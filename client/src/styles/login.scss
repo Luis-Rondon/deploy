@@ -1,0 +1,53 @@
+@import './breackpoints.scss';
+
+.login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include respond-to('xxlarge') {
+    font-size: large;
+  }
+
+  .col-logo {
+    background-color: var(--blue-one);
+    min-height: 100vh;
+    text-align: center;
+    display: none;
+
+    @include respond-to('large') {
+      display: block;
+      display: flex;
+    }
+
+    .logo {
+      max-width: 80%;
+      height: auto;
+      margin: auto;
+    }
+  }
+
+  .col-form {
+    padding: 1.5rem 2rem;
+
+    .title {
+      font-weight: 700;
+      margin-bottom: 1rem;
+      @include respond-to('xxlarge') {
+        font-size: large;
+      }
+    }
+
+    .subtitle {
+      @include respond-to('xxlarge') {
+        font-size: large;
+      }
+    }
+
+    .login-form {
+      background-color: var(--white);
+      padding: 1.5rem 2rem;
+    }
+  }
+}

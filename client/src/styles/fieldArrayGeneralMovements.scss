@@ -1,0 +1,92 @@
+@import './breackpoints.scss';
+
+.main-container-row-field-general-movements {
+}
+
+.row-field-array-general-movements {
+  border-top: 1px solid var(--blue-one) !important;
+  // display: flex;
+  // justify-content: space-between;
+
+  &.bg-gray {
+    background-color: var(--gray);
+  }
+
+  &.bg-white {
+    background-color: var(--white);
+  }
+
+  .col {
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+
+  .col-title {
+    background-color: var(--gray);
+    text-align: center;
+    font-size: large;
+  }
+
+  .col-subtitle {
+    font-size: small;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0px !important;
+    // max-height: 200px !important;
+
+    .text-subtitle {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      text-align: center;
+      word-wrap: break-word;
+      max-height: 150px;
+
+      @include respond-to('medium') {
+        max-height: 100px;
+      }
+    }
+  }
+
+  .col-input {
+    padding: 5px 0px 5px 40px;
+
+    @include respond-to('large') {
+      padding: 5px 10px;
+    }
+
+    .input-radio {
+      // margin: 0px 5px;
+    }
+
+    .input-custom {
+      padding: 0px;
+      text-align: end;
+      max-width: 30% !important;
+      // max-width: fit-content !important;
+    }
+  }
+
+  .col-label {
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+
+    .text-indicator {
+      margin-bottom: 0px;
+      max-width: 100%;
+      word-wrap: break-word;
+
+      &.default {
+        color: var(--blue-one);
+      }
+
+      &.green {
+        color: var(--green-dark) !important;
+      }
+
+      &.red {
+        color: var(--red);
+      }
+    }
+  }
+}

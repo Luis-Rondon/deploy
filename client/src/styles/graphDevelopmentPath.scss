@@ -1,0 +1,219 @@
+@import './breackpoints.scss';
+
+.graph-development-path-background {
+  background-color: var(--gray);
+  height: 100vh;
+  left: 0rem;
+  margin: 0rem !important;
+  position: fixed;
+  top: 0rem;
+  transition: all 0.8s;
+  width: 100vw;
+  z-index: 10;
+}
+
+.graph-development-path-col {
+  border-radius: 10px;
+  height: fit-content;
+  // top: 5%;
+  width: 500px;
+
+  // @include respond-to("medium") {
+  //   display: flex;
+  //   justify-content: center;
+  //   width: fit-content;
+  // }
+
+  // @include respond-to("large") {
+  //   display: flex;
+  //   justify-content: center;
+  //   width: 800px;
+  // }
+
+  .title {
+    text-align: center;
+    margin-bottom: 15px !important;
+
+    @include respond-to('xxlarge') {
+      font-size: large;
+    }
+  }
+
+  .graph-development-path-form {
+    height: 90vh;
+    max-height: 100% !important;
+    background-color: var(--white);
+    margin: 1rem 0rem;
+    padding: 0rem !important;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    @include respond-to('medium') {
+      padding: 2rem;
+    }
+
+    .chart-container {
+      margin-top: 155px;
+      transform: rotate(90deg);
+      width: 75vh !important;
+      height: 40% !important;
+
+      @include respond-to('medium') {
+        margin-top: 0px;
+        transform: none !important;
+        width: 90vw !important;
+      }
+
+      @include respond-to('large') {
+        margin-top: 0px;
+        transform: none !important;
+        width: 85vw !important;
+      }
+    }
+
+    .container-col-date {
+      width: 100% !important;
+      display: flex;
+      flex-direction: row;
+
+      .col-date-score-title {
+        padding: 0px 3px 0px 0px;
+        width: 7%;
+        border: 0.5px solid var(--blue-one);
+        text-align: center;
+        font-weight: 550;
+        overflow: hidden;
+      }
+
+      .col-date-score {
+        overflow: hidden;
+        height: 30px;
+        width: calc(93% / 37);
+
+        @include respond-to('medium') {
+          height: 40px;
+          // width: calc((100% - 80px) / 37);
+          width: calc(93% / 37);
+        }
+
+        &.date {
+          font-size: 7px;
+          font-weight: 550;
+
+          @include respond-to('medium') {
+            display: flex;
+            align-items: center;
+            font-size: 10px;
+          }
+        }
+
+        &.score {
+          font-size: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: 550;
+
+          @include respond-to('medium') {
+            font-size: smaller;
+          }
+        }
+
+        &.border {
+          border: 0.5px solid var(--blue-one) !important;
+        }
+
+        &.bg-dark {
+          background-color: var(--gray) !important;
+        }
+
+        &.color {
+          background-color: var(--pink) !important;
+        }
+        &.color-red {
+          background-color: var(--red) !important;
+        }
+        &.color-green {
+          background-color: var(--green) !important;
+        }
+        &.color-yellow {
+          background-color: var(--yellow) !important;
+        }
+      }
+
+      .col-date-number {
+        height: 30px;
+        // width: calc((100% - 80px) / 37);
+        width: calc((93%) / 37);
+        border: 0.5px solid var(--blue-one) !important;
+        text-align: center;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include respond-to('medium') {
+          font-size: small;
+        }
+      }
+    }
+
+    .container-main-pre-port {
+      display: flex;
+      text-align: center;
+      padding-left: 7%;
+
+      .container-col-text-pret {
+        border: 1px solid var(--blue-one);
+        width: calc((94% / 37) * 16);
+      }
+
+      .container-col-text-post {
+        border: 1px solid var(--blue-one);
+        width: calc((93% / 37) * 24);
+      }
+
+      .container-col-text-empty {
+        width: calc((93% / 37) * 13);
+      }
+
+      .container-col-text-mov {
+        width: calc((92% / 37) * 12);
+
+        .container-col-text-mov-small {
+          border: 1px solid var(--blue-one);
+        }
+
+        .container-col-text-mov-smaller {
+          margin-left: (100% / 11) * 8;
+          border: 1px solid var(--blue-one);
+          // font-size: 10px;
+        }
+      }
+
+      .container-col-text-fm {
+        width: calc((92% / 37) * 15);
+        display: flex;
+
+        .container-col-text-fm1 {
+          border: 1px solid var(--blue-one);
+          width: 50%;
+          background-color: var(--gray);
+        }
+
+        .container-col-text-fm2 {
+          border: 1px solid var(--blue-one);
+          width: 50%;
+        }
+      }
+    }
+
+    .btn-column {
+      text-align: center;
+      background-color: transparent;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+@import './breackpoints.scss';
+
+.calculator-sg-background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+  left: 0rem;
+  top: 0rem;
+  margin: 0rem !important;
+  background-color: var(--gray);
+  transition: all 0.8s;
+}
+
+.calculator-sg-col {
+  top: 5%;
+  height: fit-content;
+  border-radius: 10px;
+
+  @include respond-to('medium') {
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+  }
+
+  .title {
+    @include respond-to('xxlarge') {
+      font-size: large;
+    }
+  }
+
+  .calculator-sg-form {
+    height: 100%;
+    background-color: var(--white);
+    margin: 2rem 1rem;
+    padding: 0.5rem;
+    position: relative;
+    @include respond-to('medium') {
+      padding: 2rem;
+    }
+
+    input {
+      padding: 0rem;
+      &::placeholder {
+        opacity: 0.5;
+      }
+    }
+
+    .input-readonly {
+      font-size: 1rem;
+      @include respond-to('xxlarge') {
+        font-size: large;
+      }
+    }
+
+    .label {
+      margin-top: 0rem;
+      @include respond-to('medium') {
+        margin-top: 0.5rem;
+      }
+    }
+
+    .label-fix-age {
+      margin-top: 0rem;
+    }
+
+    .btn-column {
+      text-align: center;
+      background-color: transparent;
+    }
+  }
+}

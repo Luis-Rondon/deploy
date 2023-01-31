@@ -1,0 +1,282 @@
+@import './breackpoints.scss';
+
+.patient-content {
+  @include respond-to('medium') {
+    padding: 0rem 1rem;
+  }
+
+  @include respond-to('large') {
+    padding: 0rem 1.5rem;
+  }
+
+  .file-label-custom-simple {
+    @include respond-to('large') {
+      // margin-left: 1rem;
+    }
+  }
+
+  .title {
+    margin: 1rem 0rem 1.5rem 0.5rem;
+
+    @include respond-to('medium') {
+      margin: 1rem 0rem 1.5rem 1rem;
+    }
+
+    @include respond-to('xxlarge') {
+      font-size: large;
+    }
+  }
+
+  .subtitle {
+    font-weight: 700;
+
+    @include respond-to('large') {
+      font-size: 1.2rem;
+    }
+
+    @include respond-to('xxlarge') {
+      font-size: large;
+    }
+  }
+
+  .label.subtitle {
+    font-weight: 500;
+    margin-bottom: 0px;
+    height: 3em;
+    display: flex;
+    align-items: center;
+
+    @include respond-to('xxlarge') {
+      font-size: large;
+    }
+  }
+
+  .patient-form {
+    background-color: var(--white);
+    padding: 1rem 0rem 0rem 0rem;
+    position: relative;
+    margin-bottom: 0rem;
+
+    @include respond-to('large') {
+      padding: 1rem 2rem 1.5rem 2rem;
+    }
+
+    .row {
+      margin: 0rem;
+    }
+
+    .profile-pic-input {
+      text-align: center;
+    }
+
+    .datos-generales {
+      // margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .profile-pic-container {
+      position: absolute;
+      font-size: 0.7rem;
+      right: 1rem;
+      top: 3px;
+
+      .form-group {
+        margin-bottom: 0;
+      }
+
+        @include respond-to('large') {
+          font-size: 1rem;
+        }
+    }
+
+    .col {
+      padding: 0rem 0.1rem;
+
+      .profile-pic {
+        margin-top: auto;
+        width: 5rem;
+        height: 5rem;
+
+        @include respond-to('large') {
+          margin-top: 0rem;
+          width: 7rem;
+          height: 7rem;
+        }
+
+        @include respond-to('xxlarge') {
+          height: 9rem;
+          width: 9rem;
+        }
+      }
+    }
+
+    .col-background-family {
+      margin-bottom: 1rem;
+
+      @include respond-to('large') {
+        margin-bottom: 2rem;
+      }
+
+      .subtitle {
+        font-size: large;
+        font-weight: 500;
+        margin-bottom: 1rem;
+
+        @include respond-to('xxlarge') {
+          font-size: large;
+        }
+      }
+
+      .select {
+        border: 1px solid var(--blue-one);
+        font-weight: bold;
+        background-color: var(--blue-one);
+        color: var(--white);
+
+        option {
+          background-color: var(--white);
+          color: var(--blue-one);
+        }
+      }
+    }
+
+    .col-other-variables {
+      .col-indicators {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .checkbox-input {
+          margin: 0.5rem 0rem 0rem 0.2rem;
+        }
+      }
+    }
+
+    .container-inputs .item {
+      @include respond-to('xxlarge') {
+        height: 6rem;
+      }
+    }
+
+    .row-btn {
+      margin-bottom: 2rem;
+
+      .col-btn {
+        text-align: center;
+        margin-top: 2rem;
+      }
+    }
+
+    .checkmark {
+      color: var(--blue-one);
+      position: absolute;
+      left: -0.8rem;
+      top: 0rem;
+      font-size: 1.5rem;
+
+      @include respond-to('medium') {
+        font-size: 2rem;
+        left: -1rem;
+        top: -0.5rem;
+      }
+
+      @include respond-to('xxlarge') {
+        font-size: 2.5rem;
+        left: -1.2rem;
+        top: -0.3rem;
+      }
+    }
+    
+  }
+
+  .col-stays-longer {
+    margin-top: 10px !important;
+  }
+
+  .btn-cita a {
+    text-decoration: none;
+    color: var(--white) !important;
+  }
+
+  // select background type ---------------------------------------------------------------------
+
+  .background-type {
+    background-color: var(--blue-one);
+    color: var(--white);
+  }
+
+  .background-type-alarmant {
+    background-color: var(--white);
+    border: solid 1px var(--pink);
+    color: var(--pink);
+  }
+
+  .background-type-normal {
+    background-color: var(--white);
+    border: solid 1px var(--blue-one);
+    color: var(--blue-one);
+  }
+
+  .background-type-red {
+    background-color: var(--red) !important;
+    border: solid 1px var(--red) !important;
+    color: var(--white);
+  }
+
+  .background-type-blue {
+    background-color: var(--blue-one) !important;
+    border: solid 1px var(--blue-one) !important;
+    color: var(--white);
+  }
+
+  .background-type-pink {
+    background-color: var(--pink);
+    border: solid 1px var(--pink);
+    color: var(--white);
+  }
+
+  .icon-delete {
+    cursor: pointer;
+
+    &:hover {
+      color: var(--red);
+      font-size: 1.5rem;
+      transition: all 0.1s;
+    }
+
+    @include respond-to('xxlarge') {
+      font-size: 2rem;
+      margin-left: 0.5rem;
+    }
+  }
+
+  .row-observations {
+    .row {
+      margin: 0 15px;
+    }
+    .observation-input {
+      margin-top: 1em;
+    }
+  }
+  
+  .row-medicines,
+  .col-other-variables,
+  .row-observations {
+    .input-auto-heigth {
+      padding-left: 1em;
+      margin-top: 1em;
+      resize: none;
+      overflow: auto !important;
+      height: 140px !important;
+
+      & {
+        background-color: var(--gray);
+      }
+
+      &::placeholder {
+        font-size: 1.1em;
+      }
+    }
+  }
+}

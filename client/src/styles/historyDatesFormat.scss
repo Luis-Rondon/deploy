@@ -1,0 +1,113 @@
+@import './breackpoints.scss';
+
+.history-dates-format {
+  .title-field-array-column {
+    display: flex;
+    align-items: center;
+    button {
+      height: min-content !important;
+      margin-left: 10px;
+    }
+  }
+
+  .col-icon-delete {
+    display: flex;
+    align-content: center;
+
+    .icon-delete {
+      cursor: pointer;
+      padding-top: 15px !important;
+      font-size: 1.5rem !important;
+
+      &:hover {
+        color: var(--red);
+      }
+    }
+  }
+
+  a {
+    text-decoration: none !important;
+    color: var(--blue-one);
+  }
+
+  .col-icons-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .icon-dowload {
+      cursor: pointer;
+      font-size: 1.5rem !important;
+    }
+
+    .icon-delete {
+      cursor: pointer;
+      padding-top: 15px !important;
+      font-size: 1.5rem !important;
+
+      &:hover {
+        color: var(--red);
+      }
+    }
+  }
+
+  .btn-column {
+    padding: 0rem 1rem 0.5rem 1rem;
+    text-align: start;
+
+    @include respond-to('medium') {
+      margin-top: 1rem;
+      text-align: end;
+    }
+
+    @include respond-to('large') {
+      padding-bottom: 0rem;
+      padding-top: 0rem;
+    }
+
+    .btn-custom {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+
+      @include respond-to('large') {
+        margin-bottom: 0rem;
+      }
+    }
+  }
+
+  .btn-button-add {
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  .container-data {
+    height: auto;
+    background-color: var(--white);
+    padding: 1.5rem 1rem 1.5rem 0rem !important;
+
+    @include respond-to('medium') {
+      padding: 1.5rem 0rem !important;
+    }
+
+    @include respond-to('large') {
+      padding: 0.5rem 0rem 0.5rem 0rem !important;
+      margin-right: 5rem;
+    }
+  }
+
+  .col-btn-action {
+    margin-bottom: 1rem;
+  }
+
+  .col-title-date {
+    padding-top: 5px;
+    background-color: var(--blue-one);
+    color: var(--white);
+  }
+
+  .col-editor {
+    margin-bottom: 20px;
+  }
+}

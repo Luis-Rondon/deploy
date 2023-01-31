@@ -1,0 +1,223 @@
+@import './breackpoints.scss';
+
+.monitoring-files-view-modal-background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 40;
+  left: 0;
+  top: 0;
+  background-color: var(--gray);
+}
+
+.monitoring-files-view-modal {
+  background-color: var(--white);
+  transition: all 0.8s;
+  border-radius: 10px;
+  position: fixed;
+  box-sizing: border-box;
+  z-index: 50;
+  right: 0;
+  left: 0;
+  //   top: 0;
+  top: 5%;
+  margin-right: auto;
+  margin-left: auto;
+  min-height: 50vh;
+  width: 95vw;
+
+  @include respond-to('medium') {
+    width: 70vw;
+  }
+
+  @include respond-to('large') {
+    width: 60vw;
+  }
+
+  .body {
+    margin: 0rem;
+    @include respond-to('large') {
+      margin: 1rem;
+    }
+  }
+
+  .col-title {
+    background-color: var(--gray);
+    display: flex;
+    align-items: center;
+    padding: 0rem 0.5re;
+
+    @include respond-to('medium') {
+      padding: 0rem 1rem;
+    }
+
+    @include respond-to('large') {
+      background-color: var(--white);
+    }
+
+    .title {
+      margin: 0rem 0rem 0.5rem 0rem;
+      font-size: 1.2rem;
+
+      @include respond-to('medium') {
+        font-size: 1.5rem;
+      }
+      @include respond-to('large') {
+        font-size: 1rem;
+        margin: 0rem;
+      }
+      @include respond-to('xxlarge') {
+        font-size: large;
+      }
+    }
+  }
+
+  .col-nav {
+    @include respond-to('large') {
+      padding: 0rem;
+    }
+
+    .nav {
+      padding: 1rem 0rem;
+      border: none;
+
+      @include respond-to('medium') {
+        padding: 1rem 1rem;
+      }
+
+      @include respond-to('large') {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .nav-item {
+        background-color: var(--pink);
+        color: var(--white);
+        margin-right: 0.5rem;
+        border-radius: 0.3rem;
+        cursor: pointer;
+
+        @include respond-to('large') {
+          margin-right: 0rem;
+        }
+
+        .nav-link {
+          border: none;
+          padding: 0.2rem 0.5rem;
+          border-radius: 0.3rem;
+
+          @include respond-to('xlarge') {
+            padding: 0.2rem 1rem;
+          }
+          @include respond-to('xxlarge') {
+            padding: 0.5rem 1.5rem;
+            font-size: large;
+          }
+        }
+
+        .nav-link.active {
+          background-color: var(--blue-one);
+          color: var(--white);
+          border: none;
+        }
+      }
+    }
+  }
+
+  .col-content {
+    padding: 0rem 0.5rem;
+    height: 60vh;
+
+    @include respond-to('medium') {
+      padding: 0rem 1rem;
+    }
+
+    @include respond-to('xlarge') {
+      height: 70vh;
+    }
+
+    .container {
+      border: 1rem solid var(--blue-one);
+      background-color: var(--gray);
+      overflow-y: scroll;
+      height: 100%;
+      margin: 0rem;
+      min-width: 100%;
+
+      .tab-content {
+        overflow-wrap: break-word;
+        .tab-pane {
+          padding: 1rem 0rem;
+
+          .image {
+            width: 100%;
+            height: 7rem;
+            object-fit: cover;
+            object-position: center;
+
+            @include respond-to('medium') {
+              height: 10rem;
+            }
+            @include respond-to('large') {
+              height: 8rem;
+            }
+            @include respond-to('xlarge') {
+              height: 10rem;
+            }
+            @include respond-to('xxlarge') {
+              margin: auto;
+              width: 80%;
+              height: 10rem;
+            }
+          }
+
+          .video {
+            max-width: 100%;
+          }
+
+          .document {
+            height: 10rem;
+            width: 100%;
+
+            @include respond-to('medium') {
+              height: 15rem;
+            }
+            @include respond-to('large') {
+              height: 8rem;
+            }
+            @include respond-to('xlarge') {
+              height: 12rem;
+            }
+            @include respond-to('xxlarge') {
+              margin: auto;
+              height: 18rem;
+            }
+          }
+
+          .file-name {
+            font-size: small;
+
+            @include respond-to('xxlarge') {
+              font-size: medium;
+            }
+          }
+        }
+      }
+
+      .tab-pane {
+        margin: 0rem 0.5rem !important;
+
+        @include respond-to('medium') {
+          margin: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.monitoring-files-view-modal.edit {
+  .btn-custom {
+    padding: 0.4rem 0rem;
+    width: 100% !important;
+  }
+}

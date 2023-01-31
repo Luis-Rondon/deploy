@@ -1,0 +1,113 @@
+@import './breackpoints.scss';
+
+.appointment-history {
+  .container-data {
+    background-color: var(--white);
+    padding: 1.5rem 1rem !important;
+
+    @include respond-to('medium') {
+      padding: 2rem 0rem !important;
+    }
+
+    @include respond-to('large') {
+      padding: 2rem 3rem 0rem 0rem !important;
+      margin-right: 5rem;
+      margin-bottom: 2rem;
+    }
+
+    .no-data-title {
+      margin-top: 15px;
+    }
+
+    .col {
+      padding: 0rem !important;
+    }
+
+    .col-pdf-link {
+      padding: 5px 10px;
+      @include respond-to('medium') {
+        padding: 0px !important;
+      }
+      .pdf-link {
+        height: 70px;
+        width: 80%;
+        padding: 0px !important;
+        margin: 0px;
+        @include respond-to('medium') {
+          padding: 0px 0px !important;
+          width: 95%;
+        }
+        @include respond-to('large') {
+          padding: 8px !important;
+          width: 95%;
+        }
+      }
+    }
+
+    .col-profile-pic-large,
+    .col-profile-pic-small {
+      text-align: center;
+      .profile-pic-custom {
+        text-align: center;
+        height: 5.5rem;
+        width: 5.5rem;
+        @include respond-to('medium') {
+          height: 6rem;
+          width: 6rem;
+        }
+        @include respond-to('large') {
+          height: 7rem;
+          width: 7rem;
+        }
+      }
+    }
+
+    .col-profile-pic-large {
+      display: none;
+      @include respond-to('large') {
+        display: block;
+      }
+    }
+
+    .col-profile-pic-small {
+      display: block;
+      @include respond-to('large') {
+        display: none;
+      }
+    }
+
+    .col-patient-name {
+      .row div:last-child {
+        text-align: end;
+      }
+      .label {
+        color: var(--blue-text);
+        margin-left: 1.2rem;
+        @include respond-to('medium') {
+          font-size: x-large;
+          margin-left: 0rem;
+        }
+        @include respond-to('large') {
+          font-size: large;
+        }
+        @include respond-to('xxlarge') {
+          font-size: large;
+        }
+      }
+      .text {
+        color: var(--blue-one);
+      }
+      button {
+        margin-left: 0.5rem;
+        @include respond-to('large') {
+          margin-left: 0rem;
+        }
+      }
+    }
+
+    .label-container {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

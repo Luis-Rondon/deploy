@@ -1,0 +1,23 @@
+@import './breackpoints.scss';
+
+.physical-responses-form-group {
+  margin: 0rem !important;
+
+  .title {
+    color: var(--blue-text);
+    &:focus {
+      color: var(--blue-text);
+    }
+  }
+
+  .text {
+    color: var(--blue-one);
+    @include respond-to('xxlarge') {
+      font-size: large;
+    }
+  }
+
+  .checkbox-input {
+    margin-top: 0.7rem;
+  }
+}

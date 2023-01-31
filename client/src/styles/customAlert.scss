@@ -1,0 +1,25 @@
+@import './breackpoints.scss';
+
+.custom-alert {
+  color: var(--white);
+  display: flex;
+  font-weight: 500;
+  justify-content: center;
+  margin: auto !important;
+  padding: 0.5rem 0rem;
+  text-align: center;
+  width: 100%;
+
+  @include respond-to('xxlarge') {
+    font-size: large;
+  }
+
+  .spinner {
+    color: var(--white);
+    margin-right: 0.5rem;
+  }
+
+  p {
+    word-break: break-all;
+  }
+}

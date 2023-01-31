@@ -1,0 +1,59 @@
+@import './breackpoints.scss';
+
+.patient-form-group {
+  text-align: start;
+  font-size: small;
+  margin-bottom: 0.5rem !important;
+  padding: 0rem;
+
+  .row {
+    margin: 0rem 0.5rem;
+  }
+  .col {
+    .label {
+      margin: 0.4rem 0rem;
+    }
+  }
+
+  .label {
+    @include respond-to('xxlarge') {
+      font-size: large;
+    }
+  }
+
+  .input {
+    font-size: small;
+    font-weight: 500;
+    background-color: transparent;
+    color: var(--blue-text);
+    border: none;
+    padding-left: 0rem;
+    padding-right: 0rem;
+    resize: none;
+
+    @include respond-to('xxlarge') {
+      font-size: large;
+    }
+
+    &:focus {
+      color: var(--blue-text);
+    }
+    &::placeholder {
+      color: var(--gray-dark);
+      font-weight: 400;
+      opacity: 0.5;
+    }
+
+    &:placeholder-shown {
+      text-overflow: ellipsis;
+    }
+  }
+
+  .area-maximized {
+    background-color: #f00;
+  }
+}
+
+input::first-letter {
+  color: #f00;
+}

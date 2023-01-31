@@ -1,0 +1,19 @@
+{
+  "videoFormats": {
+    "formats": ["video/mp4", "video/avi", "video/mpeg", "video/quicktime"],
+    "names": [".mp4", ".avi", ".mpeg", ".mov"]
+  },
+  "imageFormats": {
+    "formats": ["image/gif", "image/jpeg", "image/jpg", "image/png"],
+    "names": [".gif", ".jpeg", ".jpg", ".png"]
+  },
+  "documentFormats": {
+    "formats": [
+      "application/pdf",
+      "application/msword",
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "application/vnd.ms-powerpoint"
+    ],
+    "names": [".pdf", ".docx", ".ppt"]
+  }
+}

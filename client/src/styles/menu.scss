@@ -1,0 +1,125 @@
+@import './breackpoints.scss';
+
+#outer-container {
+  position: relative;
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: absolute;
+  left: 2rem;
+  top: 1.3rem;
+  font-size: 1.3rem;
+  color: var(--blue-one);
+  z-index: 10 !important;
+  @include respond-to('xxlarge') {
+    font-size: large;
+  }
+  button {
+    outline: 0rem !important;
+  }
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background-color: var(--blue-one);
+}
+
+/* Color/shape of burger icon bars on hover*/
+.bm-burger-bars-hover {
+  // background: #a90000;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  display: none;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+.bm-menu-wrap {
+  position: fixed;
+  height: 100%;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background-color: var(--blue-one);
+  padding: 0rem;
+  font-size: 1.15em;
+  .icon-close {
+    position: absolute;
+    top: 1.2rem;
+    left: 30%;
+    background-color: transparent;
+    color: var(--white);
+    margin: 0rem;
+    border-left: 0.5rem solid transparent;
+    border-right: 0.5rem solid transparent;
+    @include respond-to('medium') {
+      left: 25%;
+    }
+    // @include respond-to('large') {
+    //   left: 25%;
+    // }
+    @include respond-to('xxlarge') {
+      left: 20%;
+    }
+    &:hover {
+      border-left: 0.5rem solid transparent;
+      border-right: 0.5rem solid transparent;
+    }
+  }
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  padding: 4rem 0rem;
+  text-align: center;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+  margin: 3rem 0rem 3rem 0rem;
+  color: var(--white);
+  font-size: 1.5rem;
+  padding: 0.5rem 0rem;
+  text-decoration: none;
+  cursor: pointer;
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  @include respond-to('xxlarge') {
+    font-size: large;
+  }
+
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    border-left: 0.5rem solid var(--white);
+    text-decoration: none;
+    color: var(--white);
+  }
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}

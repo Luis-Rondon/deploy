@@ -1,0 +1,48 @@
+@import './breackpoints.scss';
+
+.row-download-items {
+  margin: 0rem !important;
+  padding: 0rem 1rem;
+  text-align: center;
+
+  @include respond-to('medium') {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  @include respond-to('xxlarge') {
+    font-size: large;
+  }
+
+  .title {
+    margin: 0.5rem 0rem;
+    @include respond-to('xxlarge') {
+      font-size: 2.5rem;
+    }
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+    font-weight: 500;
+    @include respond-to('xxlarge') {
+      font-size: 2rem;
+    }
+  }
+
+  .col-btn {
+    margin: 0.5rem 0rem;
+  }
+
+  .btn-download-backup {
+    @include respond-to('xxlarge') {
+      font-size: large;
+      padding: 1.5rem 2rem;
+    }
+  }
+
+  .col-download-item {
+    border-bottom: 0.1rem solid var(--gray-medium);
+    margin-bottom: 0.2rem;
+    padding: 0.3rem 0rem;
+  }
+}

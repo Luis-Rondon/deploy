@@ -1,0 +1,32 @@
+.conduct-table {
+    font-size: smaller;
+    color: inherit !important;
+    text-align: center;
+    // margin-top: 2em;
+      
+    .input-radio {
+        display: block;
+        margin: 1em auto;
+        position: relative;
+    }
+
+    .header, .first-col {
+        background-color: var(--blue-two);
+        color: var(--white);
+    }
+    .selected {
+        background-color: var(--gray);
+    }
+
+    .comment-field {
+        padding: 0;
+
+        * {
+            margin: 0.1em !important;
+
+            textarea {
+                margin: 0;
+            }
+        }
+    }
+}

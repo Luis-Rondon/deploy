@@ -1,0 +1,161 @@
+@import './breackpoints.scss';
+
+.navbar {
+  background-color: var(--white);
+  margin: 0rem !important;
+
+  .btn-menu {
+    color: var(--blue-one);
+    display: none;
+  }
+
+  .col-input-search {
+    padding-left: 0.1rem;
+    padding-right: 0rem;
+    .column {
+      padding-right: 0rem;
+    }
+  }
+
+  .icon-search {
+    color: var(--gray-dark);
+    position: absolute;
+    left: -0.3rem;
+    top: 35%;
+    bottom: 65%;
+    @include respond-to('xxlarge') {
+      top: 30%;
+      left: -2rem;
+      font-size: 2rem;
+    }
+  }
+
+  .input-search {
+    border: none;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    @include respond-to('xxlarge') {
+      font-size: large;
+    }
+
+    &:focus {
+      box-shadow: transparent;
+      -moz-box-shadow: 0 0 0px transparent !important;
+      -webkit-box-shadow: 0 0 0px transparent !important;
+    }
+  }
+
+  .col-username {
+    display: none;
+    @include respond-to('medium') {
+      display: block;
+    }
+    .username {
+      display: none;
+      text-align: end;
+      @include respond-to('medium') {
+        display: block;
+      }
+      @include respond-to('xxlarge') {
+        font-size: large;
+      }
+    }
+  }
+
+  .profile-pic-col {
+    padding: 0rem 1rem;
+
+    .profile-pic {
+      height: 3rem;
+      border-radius: 50%;
+      width: 3rem;
+      margin: 0rem;
+      object-fit: cover;
+      object-position: center;
+      @include respond-to('large') {
+        margin: auto;
+        padding: 0rem;
+      }
+      @include respond-to('xxlarge') {
+        height: 5rem;
+        width: 5rem;
+      }
+    }
+  }
+
+  .col-settings {
+    padding: 0rem;
+  }
+
+  .dropdown {
+    border: none;
+    padding: 0rem;
+    color: var(--gray-dark);
+    background-color: transparent;
+    font-size: 1.5rem;
+    text-align: center;
+    @include respond-to('large') {
+      width: 100%;
+    }
+    @include respond-to('xxlarge') {
+      font-size: 2rem;
+    }
+    &:hover {
+      color: var(--gray-dark);
+      background-color: transparent;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+
+    .dropdown-item {
+      font-weight: 500;
+      color: var(--blue-one);
+      cursor: pointer;
+      @include respond-to('xxlarge') {
+        font-size: large;
+      }
+      &:focus {
+        outline: none;
+        background-color: transparent;
+      }
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    .details-update-pic {
+      font-size: smaller;
+    }
+  }
+}
+
+.modal-profile-pic {
+  text-align: center;
+  @include respond-to('xxlarge') {
+    font-size: large;
+  }
+
+  .profile-pic {
+    width: 5rem;
+    height: 5rem;
+
+    @include respond-to('medium') {
+      width: 6rem;
+      height: 6rem;
+    }
+    @include respond-to('xxlarge') {
+      height: 8rem;
+      width: 8rem;
+    }
+  }
+
+  .col-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 0.5rem;
+    @include respond-to('xxlarge') {
+      font-size: large;
+    }
+  }
+}

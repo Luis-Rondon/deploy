@@ -1,0 +1,51 @@
+@import './breackpoints.scss';
+
+.filter-patient-list {
+  // padding-top: 1rem;
+
+  @include respond-to('medium') {
+    padding-top: 1rem;
+  }
+
+  .col-no-padding {
+    padding: 0rem 0.5rem !important;
+
+    .form-group {
+      div {
+        padding: 0rem !important;
+      }
+
+      label {
+        padding-left: 0.5rem;
+        margin-top: 0.5rem;
+        @include respond-to('xlarge') {
+          padding-left: 1.1rem;
+        }
+        @include respond-to('xxlarge') {
+          margin-top: -0.1rem;
+          padding-left: 1rem;
+        }
+      }
+
+      .line {
+        border: none;
+      }
+    }
+  }
+
+  input {
+    background-color: transparent !important;
+  }
+
+  .btn-search {
+    padding: 0.3rem 0.5rem;
+    width: 100%;
+
+    @include respond-to('medium') {
+      width: 100%;
+    }
+    @include respond-to('xlarge') {
+      padding: 0.3rem 0rem;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@import './breackpoints.scss';
+
+.checkbox-form-group {
+  margin: 0rem !important;
+
+  .input-readonly {
+    color: var(--blue-one);
+    padding-right: -5px !important;
+  }
+
+  .text {
+    color: var(--blue-text);
+    @include respond-to('xxlarge') {
+      font-size: large;
+    }
+  }
+
+  .checkbox-input {
+    margin-top: 0.7rem;
+  }
+
+  @include respond-to('xxlarge') {
+      margin-bottom: 1em !important;
+  }
+}

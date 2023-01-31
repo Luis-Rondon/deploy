@@ -1,0 +1,70 @@
+@import './breackpoints.scss';
+
+.form-group {
+  position: relative;
+  width: auto;
+
+  .label {
+    font-weight: 500;
+    @include respond-to('xxlarge') {
+      font-size: large;
+    }
+  }
+
+  .line {
+    border-bottom: 0.2rem solid var(--gray-medium);
+    margin: 0rem;
+  }
+
+  .line-bot {
+    border-width: 0rem 0rem 0.2rem 0rem;
+  }
+
+  .line-not {
+    border-width: 0rem;
+  }
+
+  .input {
+    resize: none;
+    @include respond-to('xxlarge') {
+      font-size: large;
+    }
+
+    &:focus {
+      box-shadow: transparent;
+      -moz-box-shadow: 0 0 0px transparent !important;
+      -webkit-box-shadow: 0 0 0px transparent !important;
+    }
+  }
+
+  input:disabled.select-search__input {
+    color: var(--blue-text) !important;
+    font-weight: 500;
+  }
+
+  .checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+    color: var(--green);
+  }
+
+  .icon {
+    position: absolute;
+    right: 0.5rem;
+    top: 45%;
+
+    @include respond-to('xxlarge') {
+      font-size: 2rem;
+      top: 40%;
+    }
+  }
+
+  #role {
+    padding: 0rem;
+  }
+
+  .file-label-custom-text {
+    margin-top: 0rem !important;
+  }
+}

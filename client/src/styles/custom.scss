@@ -1,0 +1,553 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap);
+@import './breackpoints.scss';
+@import './input-search.scss';
+@import url(./icons.scss);
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1700px
+);
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1615px
+);
+
+$theme-colors: (
+  'white': #fff,
+  'gray': #daeaf7,
+  // changed
+  'gray-medium': #d9dddf,
+  'gray-dark': #818e94,
+  'blue-text': #3e6a9b,
+  'blue-one': #07497d,
+  // changed
+  'blue-two': #1c9cd9,
+  // changed
+  'pink': #ea4b84,
+  // changed
+  'green': #36f469,
+  'green-dark': #16a53c,
+  'red': #f44336,
+  'orange': #f8882d,
+);
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+:root {
+  --white: #fff;
+  --gray: #daeaf7; // changed
+  --gray-medium: #d9dddf;
+  --gray-dark: #818e94;
+  --blue-text: #3e6a9b;
+  --blue-one: #07497d; // changed
+  --blue-two: #1c9cd9; // changed
+  --pink: #ea4b84; // changed
+  --green: #36f469;
+  --green-dark: #16a53c;
+  --red: #f44336;
+  --orange: #f8882d;
+
+  /*
+  ..#######..##.......########.....##.....##.########.########...######..####..#######..##....##
+  .##.....##.##.......##.....##....##.....##.##.......##.....##.##....##..##..##.....##.###...##
+  .##.....##.##.......##.....##....##.....##.##.......##.....##.##........##..##.....##.####..##
+  .##.....##.##.......##.....##....##.....##.######...########...######...##..##.....##.##.##.##
+  .##.....##.##.......##.....##.....##...##..##.......##...##.........##..##..##.....##.##..####
+  .##.....##.##.......##.....##......##.##...##.......##....##..##....##..##..##.....##.##...###
+  ..#######..########.########........###....########.##.....##..######..####..#######..##....##
+  */
+  // --white: #fff;
+  // --gray: #f4f7fc;
+  // --gray-medium: #d9dddf;
+  // --gray-dark: #818e94;
+  // --blue-text: #3e6a9b;
+  // --blue-one: #213162;
+  // --blue-two: #184887;
+  // --blue-three: #2b5c92;
+  // --blue-four: #6591be;
+  // --blue-five: #7ba1c8;
+  // --blue-six: #b9d0ed;
+  // --green: #36f469;
+  // --red: #f44336;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+p {
+  margin: 0rem;
+}
+
+body {
+  background-color: var(--gray);
+  color: var(--blue-one);
+  font-display: swap;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+.divider {
+  background-color: var(--gray-medium);
+  height: 0.15rem;
+  margin: 0.5rem 1rem;
+}
+
+.icon-close {
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  z-index: 1;
+  @include respond-to('medium') {
+    right: 1rem;
+    top: 1rem;
+  }
+  @include respond-to('xxlarge') {
+    font-size: 2.5rem;
+  }
+
+  @include respond-to('large') {
+    // right: 50%;
+    right: 1rem;
+    top: 0.7rem;
+    font-size: 1.2rem;
+  }
+}
+
+.btn-custom {
+  background-color: var(--pink);
+  color: var(--white);
+  font-weight: 500;
+  padding: 0.3rem 2rem;
+  outline: none;
+
+  @include respond-to('xxlarge') {
+    font-size: x-large;
+  }
+
+  &:hover {
+    background-color: var(--blue-one);
+    color: var(--white);
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.btn-custom-cancel {
+  background-color: var(--blue-two);
+  color: var(--white);
+  font-weight: 500;
+  padding: 0.3rem 2rem;
+  outline: none;
+  @include respond-to('xxlarge') {
+    font-size: large;
+  }
+
+  &:hover {
+    background-color: var(--blue-one);
+    color: var(--white);
+  }
+
+  &:active {
+    box-shadow: none;
+  }
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.btn-clear {
+  background-color: transparent;
+  @include respond-to('xxlarge') {
+    font-size: x-large;
+  }
+  &:focus {
+    outline: 0rem;
+    box-shadow: none;
+  }
+}
+
+.profile-pic-custom {
+  background-color: var(--blue-one);
+  border-radius: 50%;
+  margin: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+.title {
+  margin: 1rem 0rem;
+  font-weight: 700;
+  font-size: 1.3rem;
+  @include respond-to('medium') {
+    font-size: 1.5rem;
+  }
+
+  @include respond-to('xxlarge') {
+    font-size: x-large;
+  }
+}
+
+.subtitle-global {
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 0rem !important;
+  width: 100%;
+  @include respond-to('medium') {
+    padding: 0rem 1rem;
+  }
+  @include respond-to('large') {
+    // padding: 0rem 3rem;
+    font-size: 1.5rem;
+  }
+  @include respond-to('xlarge') {
+    font-size: 1.4rem;
+  }
+  @include respond-to('xxlarge') {
+    font-size: x-large;
+  }
+}
+
+.label {
+  margin-bottom: 0rem;
+}
+
+.input-readonly:disabled,
+.input-readonly[readonly] {
+  padding: 0rem;
+  background-color: transparent;
+  border: none;
+  margin: 0rem;
+  font-size: small;
+  font-weight: 500;
+
+  @include respond-to('xxlarge') {
+    font-size: large;
+  }
+
+  &:focus {
+    outline: 0rem;
+    box-shadow: none;
+  }
+}
+
+.toast-success {
+  background-color: var(--green);
+  color: var(--blue-one);
+}
+
+.modal.fade {
+  .modal-dialog {
+    height: 100%;
+    right: 0;
+    left: 0;
+    top: 25%;
+    bottom: 25%;
+    position: fixed;
+  }
+}
+
+.reactstrap-confirm {
+  .modal-title,
+  .modal-body {
+    @include respond-to('xxlarge') {
+      font-size: x-large;
+    }
+  }
+
+  .btn {
+    @include respond-to('xxlarge') {
+      font-size: large;
+    }
+  }
+
+  .close {
+    color: var(--blue-one);
+    opacity: 1;
+    font-size: 2rem;
+    margin: 0rem;
+    padding: 0rem;
+
+    @include respond-to('xxlarge') {
+      font-size: 4rem;
+      margin: 0rem;
+      padding: 0rem;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.text-capitalize {
+  text-transform: uppercase !important;
+}
+
+// --------------------------------------------------------------------------------------------
+
+input[type='checkbox'].checkbox-input-custom {
+  position: absolute;
+  z-index: -1000;
+  left: -1000px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+input[type='checkbox'].checkbox-input-custom + label.checkbox-label-custom {
+  padding-left: 20px;
+  height: 20px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position: 0 0;
+  background-size: cover;
+  vertical-align: middle;
+  cursor: pointer;
+  margin: 0rem;
+  @include respond-to('xxlarge') {
+    height: 40px;
+    padding-left: 40px;
+  }
+}
+
+input[type='checkbox'].checkbox-input-custom:checked
+  + label.checkbox-label-custom {
+  background-position: 0 -20px;
+  @include respond-to('xxlarge') {
+    background-position: 0 -40px;
+  }
+}
+
+label.checkbox-label-custom {
+  // background-image: url(../assets/csscheckbox.png);
+  background-position: center;
+  background-size: cover;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 0rem;
+  margin: 0rem;
+}
+
+// --------------------------------------------------------------------------------------------
+
+input[type='file'].file-input-custom,
+input[type='file'].file-input-custom-mini {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+input[type='file'].file-input-custom + .file-label-custom-simple {
+  font-weight: 400;
+  background-color: var(--transparent);
+  cursor: pointer;
+  display: inline-block;
+  @include respond-to('xxlarge') {
+    font-size: x-large;
+  }
+}
+
+// ----------------------------------------------------------------------------------------------
+
+input[type='file'].file-input-custom {
+  font-weight: 400;
+  background-color: var(--gray);
+  cursor: pointer;
+  display: inline-block;
+
+  @include respond-to('xxlarge') {
+    margin: 0rem 2rem;
+    font-size: large;
+  }
+}
+
+input[type='file'].file-input-custom:focus + .file-label-custom-cube,
+input[type='file'].file-input-custom + .file-label-custom-cube:hover {
+  background-color: var(--blue-one);
+}
+
+input[type='file'].file-input-custom:focus + .file-label-custom-cube .icon,
+input[type='file'].file-input-custom + .file-label-custom-cube:hover .icon {
+  background-color: var(--white);
+  color: var(--blue-one);
+}
+
+.file-label-custom-simple {
+  .text {
+    padding: 0.1rem 0.3rem;
+    &:hover {
+      font-weight: 700;
+    }
+  }
+}
+
+input[type='file'].file-input-custom + .file-label-custom-cube:hover .icon {
+  background-color: var(--white);
+  color: var(--blue-one);
+}
+
+.file-label-custom-cube {
+  // display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--blue-one);
+  width: 90%;
+  // padding: 0.1rem 0rem;
+  padding-top: 0.3rem;
+  border-radius: 0.2rem;
+  border: 0.5rem solid var(--blue-one);
+  cursor: pointer;
+
+  @include respond-to('xlarge') {
+    // padding: 2rem 0rem;
+  }
+
+  .icon {
+    position: relative;
+    right: 0rem;
+    background-color: var(--blue-one);
+    color: var(--white);
+    border-radius: 50%;
+    width: min-content;
+    padding: 0.5rem;
+  }
+
+  .text {
+    background-color: var(--blue-one);
+    color: var(--white);
+    width: min-content;
+    max-width: 80%;
+    border-radius: 0.2rem;
+    padding: 0.2rem 0.5rem;
+    margin-top: 0.5rem;
+    line-height: 100%;
+  }
+}
+
+// Mini ---------------------------
+
+input[type='file'].file-input-custom-mini + .file-label-custom-cube-mini {
+  background-color: var(--gray);
+  border: 0.1rem solid var(--blue-one);
+  cursor: pointer;
+  width: 5.5rem;
+  padding: 0.1rem !important;
+  @include respond-to('xxlarge') {
+    width: 6.5rem;
+  }
+}
+
+input[type='file'].file-input-custom-mini:focus + .file-label-custom-cube-mini,
+input[type='file'].file-input-custom-mini + .file-label-custom-cube-mini:hover {
+  background-color: var(--blue-one);
+}
+
+input[type='file'].file-input-custom-mini:focus
+  + .file-label-custom-cube-mini
+  .icon,
+input[type='file'].file-input-custom-mini
+  + .file-label-custom-cube-mini:hover
+  .icon {
+  background-color: var(--white);
+  color: var(--blue-one);
+}
+
+input[type='file'].file-input-custom-mini:focus
+  + .file-label-custom-cube-mini
+  .text,
+input[type='file'].file-input-custom-mini
+  + .file-label-custom-cube-mini:hover
+  .text {
+  color: var(--white);
+}
+
+input[type='file'].file-input-custom-mini
+  + .file-label-custom-cube-mini:hover
+  .icon {
+  color: var(--blue-one);
+  @include respond-to('xxlarge') {
+  }
+}
+
+.file-label-custom-cube-mini {
+  display: flex;
+  // flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0rem;
+  border-radius: 0.2rem;
+  width: 100% !important;
+
+  @include respond-to('xlarge') {
+    padding: 2rem 0rem;
+  }
+
+  .icon {
+    position: relative;
+    right: 0rem;
+    background-color: var(--blue-one);
+    color: var(--white);
+    border-radius: 50%;
+    width: min-content;
+    padding: 0.5rem;
+  }
+
+  .text {
+    color: var(--blue-one);
+    // width: min-content;
+    // max-width: 80%;
+    border-radius: 0.2rem;
+    padding: 0.2rem;
+    margin-left: 0.2rem;
+    line-height: 100%;
+  }
+}
+
+input[type='radio']:checked:after {
+  width: 15px;
+  height: 15px;
+  border-radius: 15px;
+  top: -2px;
+  left: -1px;
+  position: relative;
+  content: '';
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid var(--white);
+  background-color: var(--blue-one);
+}

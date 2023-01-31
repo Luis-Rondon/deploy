@@ -1,0 +1,78 @@
+@import './breackpoints.scss';
+
+.graph-head-circunference-background {
+  background-color: var(--gray);
+  height: 100vh;
+  left: 0rem;
+  margin: 0rem !important;
+  position: fixed;
+  top: 0rem;
+  transition: all 0.8s;
+  width: 100vw;
+  z-index: 10;
+}
+
+.graph-head-circunference-col {
+  border-radius: 10px;
+  height: fit-content;
+  // top: 5%;
+  width: 500px;
+
+  // @include respond-to("medium") {
+  //   display: flex;
+  //   justify-content: center;
+  //   width: fit-content;
+  // }
+
+  // @include respond-to("large") {
+  //   display: flex;
+  //   justify-content: center;
+  //   width: 800px;
+  // }
+
+  .title {
+    text-align: center;
+    @include respond-to('xxlarge') {
+      font-size: large;
+    }
+  }
+
+  .graph-head-circunference-form {
+    height: 90vh;
+    max-height: 100% !important;
+    background-color: var(--white);
+    margin: 1rem 0rem;
+    padding: 0rem !important;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    @include respond-to('medium') {
+      padding: 2rem;
+    }
+
+    .chart-container {
+      margin-top: 125px;
+      transform: rotate(90deg);
+      width: 65vh !important;
+
+      @include respond-to('medium') {
+        margin-top: 0px;
+        transform: none !important;
+        width: 90vw !important;
+      }
+
+      @include respond-to('large') {
+        margin-top: 0px;
+        transform: none !important;
+        width: 70vw !important;
+      }
+    }
+    .btn-column {
+      text-align: center;
+      background-color: transparent;
+    }
+  }
+}

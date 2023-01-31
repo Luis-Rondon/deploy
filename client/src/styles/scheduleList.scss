@@ -1,0 +1,59 @@
+@import './breackpoints.scss';
+
+.schedule-list {
+  max-height: 6.8rem;
+  overflow-y: scroll;
+  margin-bottom: 1rem;
+
+  @include respond-to('xlarge') {
+    max-height: 9.8rem;
+  }
+
+  .row-item {
+    border-bottom: 0.2rem solid var(--gray-medium);
+    padding: 0.2rem 0rem;
+    &:hover,
+    &:active {
+      border-bottom: 0.2rem solid var(--blue-one);
+    }
+
+    @include respond-to('medium') {
+      width: 30rem;
+    }
+    @include respond-to('xlarge') {
+      font-size: x-large;
+      width: auto;
+    }
+  }
+
+  .text-time {
+    font-size: small;
+    color: var(--gray-dark);
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @include respond-to('medium') {
+      font-size: 1rem;
+    }
+
+    @include respond-to('xxlarge') {
+      font-size: 1.5rem;
+    }
+  }
+
+  .text-description {
+    color: var(--gray-dark);
+    max-width: 20rem;
+
+    @include respond-to('xxlarge') {
+      font-size: 1.5rem;
+    }
+  }
+
+  .col-no-padding {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+}
